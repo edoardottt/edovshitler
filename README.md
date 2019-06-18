@@ -1,7 +1,7 @@
 # edovshitler
-edovshitler is a simple game for computers that i enjoyed making it. It's maked using Python, especially with pygame library and SQLite3.
+edovshitler is a simple game for computers that I enjoyed making it. It's maked using Python, especially with pygame library and SQLite3.
 --------------------------
-It was develop with pygame 1.9.5 library that helps game creating. It stores the record (maximum bombs avoided, maximum missiles shooted and maximum enemies killed) in the results.db database (SQLite3). built with pyinstaller command.
+It was develop with pygame 1.9.5 library that helps game creating. It stores the record (maximum bombs avoided, maximum missiles shooted and maximum enemies killed) in the results.db database (SQLite3). It's built with pyinstaller --onefile command.
 --------------------------
 For run it:
 1) Download all the repo
@@ -12,4 +12,5 @@ For run it:
 --------------------------
 https://www.edoardoottavianelli.it for contact me.
 
-          Edoardo Ottavianelli
+
+                                        Edoardo Ottavianelli
