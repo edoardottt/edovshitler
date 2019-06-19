@@ -4,6 +4,7 @@ Created on Tue Apr 16 15:18:48 2019
 
 @author: edoardottt
 """
+print("https://www.edoardoottavianelli.it")
 # pygame libraries required
 import pygame
 import random
@@ -11,7 +12,6 @@ from Enemy import Enemy
 from Missile import Missile
 from Bomb import Bomb
 import results
-import sys
 
 #initialize pygame-------------------------------------------------------------
 pygame.init()
@@ -20,7 +20,7 @@ pygame.init()
 screenWidth=800
 screenHeight=600
 screen = pygame.display.set_mode((screenWidth,screenHeight)) # set the screen dimension
-pygame.display.set_caption("EdoGame") # set the title of the screen
+pygame.display.set_caption("edoGame") # set the title of the screen
 pygame.key.set_repeat(0,0) # allow repeat key with 1st (before the first reapeat) and 2st(between 2 repeats)
 
 edo = pygame.image.load("edo.jpg")
@@ -30,6 +30,7 @@ hitlersx = pygame.image.load("hitlersx.png")
 hitlerdx = pygame.image.load("hitlerdx.png")
 explo = pygame.image.load("explosion.png")
 bomb = pygame.image.load("bomb.png")
+end = pygame.image.load("end.jpg")
 gameoverdisplay = pygame.image.load("gameover.jpg")
 x = (screenWidth*0.45)
 y = (screenHeight*0.74)
@@ -81,21 +82,21 @@ while(loopGame):
                 loopGame=False
                 quitting = True
                 fine = False
-            if (event.type==pygame.KEYDOWN): # se premo un tasto
-                if (event.key==pygame.K_RIGHT): # se premo freccia destra
+            if (event.type==pygame.KEYDOWN): # if I press a key
+                if (event.key==pygame.K_RIGHT): # right button held down
                     movimentox = 26
                     pressright= True
-                if (event.key==pygame.K_LEFT): # se premo freccia sinistra
+                if (event.key==pygame.K_LEFT): # left button held down
                     movimentox = -26
                     pressleft= True
-            if (event.type==pygame.KEYUP):
-                if (event.key==pygame.K_RIGHT): #se rilascio freccia destra
+            if (event.type==pygame.KEYUP): # if I release a key
+                if (event.key==pygame.K_RIGHT): # right button released
                     pressright= False
                     if (pressleft):
                         movimentox = -26
                     else:
                         movimentox = 0
-                elif (event.key==pygame.K_LEFT): # se rilascio freccia sinistra
+                elif (event.key==pygame.K_LEFT): # left button released
                     pressleft = False
                     if (pressright):
                         movimentox = 26
@@ -213,10 +214,8 @@ while(loopGame):
             paintEdo(693,y)
         #pygame.display.update() update only a part of the screen
         pygame.display.flip() #update the whole screen
-
-# the game---------------------------------------------------------------------
         
-# SALVATAGGIO RISULTATI E CONTROLLO RECORD-------------------------------------
+# RESULT SAVING AND RECORD CHECKING-------------------------------------
 if(not quitting):
     screen.blit(gameoverdisplay,(0,0))
     pygame.display.flip() #update the whole screen
@@ -231,24 +230,28 @@ if(not quitting):
 if(fine):
     pygame.font.init()
     font = pygame.font.Font('freesansbold.ttf', 32) 
-    stringaresult = "Bombe: " + str(bombe_evitate) + " missili: " + str(missili_sparati) + " nemici: " + str(nemici_sconfitti)
+    stringaresult = "Bombs: " + str(bombe_evitate) + " | Missiles: " + str(missili_sparati) + " | Enemies: " + str(nemici_sconfitti)
     text = font.render(stringaresult, True, green, blue)
     screen.fill(white)
+    screen.blit(end,(0,0))
     screen.blit(text, (100,0))
     if (record):
-        text1 = font.render("COMPLIMENTI, NUOVO RECORD", True, green, blue)
+        text1 = font.render("VERY NICE!! NEW RECORD!", True, green, blue)
         screen.blit(text1, (150,100))
-    text2 = font.render("RECORD BOMBE: " + stringarecord[0], True, green, blue)
+    text2 = font.render("BOMBS RECORD: " + stringarecord[0], True, green, blue)
     screen.blit(text2, (150,250))
-    text3 = font.render("RECORD MISSILI: " + stringarecord[1], True, green, blue)
+    text3 = font.render("MISSILES RECORD: " + stringarecord[1], True, green, blue)
     screen.blit(text3, (150,310))
-    text4 = font.render("RECORD NEMICI: " + stringarecord[2], True, green, blue)
+    text4 = font.render("ENEMIES RECORD: " + stringarecord[2], True, green, blue)
     screen.blit(text4, (150,370))
+    text5 = font.render("?ENTER TO QUIT", True, red, white)
+    screen.blit(text5, (250,550))
     pygame.display.flip() #update the whole screen
-    si = True
-    while(si):
+    yes = True
+    while(yes):
         for event in pygame.event.get():
-            if (event.type == pygame.QUIT):
-                si = False
+            if (event.type==pygame.KEYDOWN): # if I press a key
+                if (event.key==pygame.K_RETURN): # right button held down
+                    yes = False
 pygame.quit()
-sys.exit()
+exit()

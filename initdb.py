@@ -10,6 +10,7 @@ import sqlite3
 conn = sqlite3.connect('result.db')
     
 c = conn.cursor()
+c.execute('drop table if exists match')
 c.execute("""CREATE TABLE match (
             date date,
             missili integer,
