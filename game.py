@@ -12,6 +12,7 @@ from Enemy import Enemy
 from Missile import Missile
 from Bomb import Bomb
 import results
+import sys
 
 #initialize pygame-------------------------------------------------------------
 pygame.init()
@@ -254,4 +255,4 @@ if(fine):
                 if (event.key==pygame.K_RETURN): # right button held down
                     yes = False
 pygame.quit()
-exit()
+sys.exit()
