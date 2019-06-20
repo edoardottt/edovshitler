@@ -39,6 +39,9 @@ USAGE :computer:
 5) Have fun playing it!
 :zap::zap::zap:
 --------------------------
+If you liked it drop a :star:
+--------------------------
+
 https://www.edoardoottavianelli.it for contact me.
 
 
