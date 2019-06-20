@@ -8,7 +8,8 @@ It can run on Windows 10 | 8.1 | 8 | 7 | Vista
 --------------------------
 DOWNLOAD :satellite:
 --------------------------
-
+GIT command on prompt: git -clone https://github.com/edoardottt/edovshitler.git
+Download by Browser on: https://github.com/edoardottt/edovshitler
 --------------------------
 USAGE :computer:
 --------------------------
@@ -33,7 +34,7 @@ USAGE :computer:
       4c) double click on /dist/initdb.py file
       
 5) Have fun playing it!
-
+:zap::zap::zap:
 --------------------------
 https://www.edoardoottavianelli.it for contact me.
 
