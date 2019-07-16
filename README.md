@@ -16,6 +16,7 @@ It was develop with pygame 1.9.5 library that helps game creating. It's a 2d gam
       - Space button - shoot to enemies
       
 It stores the record (maximum bombs avoided, maximum missiles shooted and maximum enemies killed) in the result.db database (SQLite3). It's built with pyinstaller --onefile command.
+(The .exe is into /dist)
 It can run on Windows 10 | 8.1 | 8 | 7 | Vista
 
 --------------------------
