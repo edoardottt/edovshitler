@@ -1,3 +1,3 @@
 cd dist
-py initdb.py
+python initdb.py
 cd ..
