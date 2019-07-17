@@ -24,7 +24,7 @@ screen = pygame.display.set_mode((screenWidth,screenHeight)) # set the screen di
 pygame.display.set_caption("edoGame") # set the title of the screen
 pygame.key.set_repeat(0,0) # allow repeat key with 1st (before the first reapeat) and 2st(between 2 repeats)
 
-edo = pygame.image.load("edo.jpg")
+edo = pygame.image.load("edo.png")
 screenDisplay = pygame.image.load("wallpaper.png")
 missilepaint = pygame.image.load("missile.png")
 hitlersx = pygame.image.load("hitlersx.png")
@@ -72,7 +72,8 @@ abbassa = False
 gameover = False
 quitting = False
 fine = True
-
+every_enemy = 8
+every_bomb = 14
 # The game---------------------------------------------------------------------
 while(loopGame):
     if (gameover):
@@ -109,7 +110,14 @@ while(loopGame):
                     incrementoy = 28
                     spara = True
                     missili_sparati +=1
-            #print(event) display events
+                if (event.key==pygame.K_p): # PAUSE
+                    loop = True
+                    while(loop):
+                        for event in pygame.event.get():
+                            if (event.type==pygame.KEYUP):
+                                if (event.key==pygame.K_p): # RESUME THE GAME
+                                    loop = False
+        #print(event) display events
         #screen.fill(white)
         screen.blit(screenDisplay,(0,0))
         x = x + movimentox
@@ -166,7 +174,7 @@ while(loopGame):
         if(bombes):
             for i in range(len(bombe)):
                 bomba = bombe[i]
-                if (x-25<=bomba.x_m<=x+90 and y-50<=bomba.y_m<=y+155):
+                if (x-35<=bomba.x_m<=x+90 and y-50<=bomba.y_m<=y+155):
                     paintExplo(bomba.x_m,bomba.y_m-100)
                     paintExplo(bomba.x_m,bomba.y_m-50)
                     paintExplo(bomba.x_m,bomba.y_m)
@@ -186,7 +194,7 @@ while(loopGame):
                 y_missile = missili[i].y_m
                 x_nemico = nemici[j].x_n
                 y_nemico = nemici[j].y_n
-                if (x_nemico<x_missile<x_nemico+70):
+                if (x_nemico-20<x_missile<x_nemico+70):
                     if (y_nemico<y_missile<y_nemico+90):
                         paintExplo(x_nemico,y_nemico)
                         nemici[j].__del__()
@@ -196,11 +204,15 @@ while(loopGame):
           if (item.y_n<-10) is False:
             result.append(item)
         nemici = result
-        if (timee%8==0):
+        if (timee%every_enemy==0):
+            if(every_enemy!=1 and (timee%500 == 0)):
+                every_enemy-=1
             hit = True
             random1 = random.randint(1,600)
             nemico = nemici.append(Enemy(random1,0))
-        if (timee%17==0):
+        if (timee%every_bomb==0):
+            if(every_bomb!=3 and (timee%500 == 0)):
+                every_bomb-=1
             bombes = True
             lennemici = len(nemici) - 1
             if(lennemici>=1):
