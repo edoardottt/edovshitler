@@ -15,7 +15,19 @@ It was develop with pygame 1.9.5 library that helps game creating. It's a 2d gam
       
       - Space button - shoot to enemies
       
+      - P button - Pause and resume the game
+      
 It stores the record (maximum bombs avoided, maximum missiles shooted and maximum enemies killed) in the result.db database (SQLite3). It's built with pyinstaller --onefile command.
+
+**So, you can create your own exe file with pyinstaller.**
+For download it, execute:
+
+      pip install pyinstaller
+
+And then (inside the edovshitler folder) :
+
+      pyinstaller --onefile game.py
+
 (The .exe is into /dist)
 It can run on Windows 10 | 8.1 | 8 | 7 | Vista
 
