@@ -4,7 +4,10 @@ Created on Tue Apr 16 15:18:48 2019
 
 @author: edoardottt
 """
+version = 1.0
 print("https://www.edoardoottavianelli.it")
+print("edovshitler v"+str(version))
+print("MIT License")
 # pygame libraries required
 import pygame
 import random
@@ -21,7 +24,7 @@ pygame.init()
 screenWidth=800
 screenHeight=600
 screen = pygame.display.set_mode((screenWidth,screenHeight)) # set the screen dimension
-pygame.display.set_caption("edoGame") # set the title of the screen
+pygame.display.set_caption("edovshitler") # set the title of the screen
 pygame.key.set_repeat(0,0) # allow repeat key with 1st (before the first reapeat) and 2st(between 2 repeats)
 
 edo = pygame.image.load("edo.png")
@@ -54,11 +57,13 @@ nemici_sconfitti = 0
 bombe_evitate = 0
 missili_sparati = 0
 missilen = 0
-white = (255,255,255)
-black = (0,0,0)
-red = (255,0,0)
-green = (0,255,0)
-blue = (0,0,255)
+white=(255, 255, 255)
+black=(0, 0, 0)
+gray=(50, 50, 50)
+red=(255, 0, 0)
+green=(0, 255, 0)
+blue=(0, 0, 255)
+yellow=(255, 255, 0)
 missili = []
 nemici = []
 bombe = []
@@ -73,8 +78,138 @@ gameover = False
 quitting = False
 fine = True
 every_enemy = 8
-every_bomb = 14
+every_bomb = 13
+font = 'freesansbold.ttf'
+# start menu-------------------------------------------------------------------
+
+menu=True
+selected = 0
+menu_object = ["start","commands","info","quit"]
+pygame.font.init()
+def text_format(message, textFont, textSize, textColor):
+    newFont=pygame.font.Font(textFont, textSize)
+    newText=newFont.render(message, 0, textColor)
+ 
+    return newText
+
+while menu:
+    for event in pygame.event.get():
+        if event.type==pygame.QUIT:
+            pygame.quit()
+            sys.exit()
+        if event.type==pygame.KEYDOWN:
+            if event.key==pygame.K_UP:
+                if(selected!=0):
+                    selected -=1
+            elif event.key==pygame.K_DOWN:
+                if(selected!=3):
+                    selected +=1
+            if event.key==pygame.K_RETURN:
+                if (selected == 0):
+                    menu = False
+                elif (selected == 1):
+                    screen.fill(blue)
+                    pygame.display.set_caption("edovshitler | Commands") # set the title of the screen
+                    move_string = 'press left or right key to move edo'
+                    shoot_string = 'press space key for shoot'
+                    pause_string = 'press P key for pause/resume the game'
+                    string5 = 'press enter to return to menu'
+                    text_move = text_format(move_string, font, 24, white)
+                    text_shoot = text_format(shoot_string, font, 24, white)
+                    text_pause = text_format(pause_string, font, 24, white)
+                    text5 = text_format(string5, font, 15, yellow)
+                    move_rect = text_move.get_rect()
+                    shoot_rect = text_shoot.get_rect()
+                    pause_rect = text_pause.get_rect()
+                    rect5 = text5.get_rect()
+                    screen.blit(text_move, (screenWidth/2 - (move_rect[2]/2), 200))
+                    screen.blit(text_shoot, (screenWidth/2 - (shoot_rect[2]/2), 280))
+                    screen.blit(text_pause, (screenWidth/2 - (pause_rect[2]/2), 360))
+                    screen.blit(text5, (screenWidth/2 - (rect5[2]/2), 550))
+                    loop = True
+                    pygame.display.update()
+                    while loop:
+                        for event in pygame.event.get():
+                            if event.type==pygame.QUIT:
+                                pygame.quit()
+                                sys.exit()
+                            if event.type==pygame.KEYDOWN:
+                                if event.key==pygame.K_RETURN:
+                                    loop = False
+                elif (selected == 2):
+                    screen.fill(blue)
+                    pygame.display.set_caption("edovshitler | Info") # set the title of the screen
+                    string1 = 'Edoardo Ottavianelli ©'
+                    string2 = 'https://www.edoardoottavianelli.it'
+                    string3 = 'This product is kept on https://github.com/edoardottt/edovshitler'
+                    string4 = 'Under MIT License'
+                    string5 = 'press enter to return to menu'
+                    text1 = text_format(string1, font, 24, white)
+                    text2 = text_format(string2, font, 22, white)
+                    text3 = text_format(string3, font, 14, white)
+                    text4 = text_format(string4, font, 20, white)
+                    text5 = text_format(string5, font, 15, yellow)
+                    rect1 = text1.get_rect()
+                    rect2 = text2.get_rect()
+                    rect3 = text3.get_rect()
+                    rect4 = text4.get_rect()
+                    rect5 = text5.get_rect()
+                    screen.blit(text1, (screenWidth/2 - (rect1[2]/2), 200))
+                    screen.blit(text2, (screenWidth/2 - (rect2[2]/2), 260))
+                    screen.blit(text3, (screenWidth/2 - (rect3[2]/2), 320))
+                    screen.blit(text4, (screenWidth/2 - (rect4[2]/2), 380))
+                    screen.blit(text5, (screenWidth/2 - (rect5[2]/2), 550))
+                    loop = True
+                    pygame.display.update()
+                    while loop:
+                        for event in pygame.event.get():
+                            if event.type==pygame.QUIT:
+                                pygame.quit()
+                                sys.exit()
+                            if event.type==pygame.KEYDOWN:
+                                if event.key==pygame.K_RETURN:
+                                    loop = False
+                else:
+                    pygame.quit()
+                    sys.exit()
+ 
+        # Main Menu UI
+        screen.fill(blue)
+        title=text_format("edovshitler", font, 90, yellow)
+        if selected==0:
+            text_start = text_format("START", font, 75, white)
+        else:
+            text_start = text_format("START", font, 75, black)
+        if selected==1:
+            text_commands = text_format("COMMANDS", font, 75, white)
+        else:
+            text_commands = text_format("COMMANDS", font, 75, black)
+        if selected==2:
+            text_info = text_format("INFO", font, 75, white)
+        else:
+            text_info = text_format("INFO", font, 75, black)
+        if selected==3:
+            text_quit = text_format("QUIT", font, 75, white)
+        else:
+            text_quit = text_format("QUIT", font, 75, black)
+ 
+        title_rect=title.get_rect()
+        start_rect=text_start.get_rect()
+        commands_rect = text_commands.get_rect()
+        info_rect = text_info.get_rect()
+        quit_rect=text_quit.get_rect()
+ 
+        # Main Menu Text
+        screen.blit(title, (screenWidth/2 - (title_rect[2]/2), 80))
+        screen.blit(text_start, (screenWidth/2 - (start_rect[2]/2), 260))
+        screen.blit(text_commands, (screenWidth/2 - (commands_rect[2]/2), 320))
+        screen.blit(text_info, (screenWidth/2 - (info_rect[2]/2), 380))
+        screen.blit(text_quit, (screenWidth/2 - (quit_rect[2]/2), 440))
+        pygame.display.update()
+        pygame.display.set_caption("edovshitler | Menu") # set the title of the screen
+
 # The game---------------------------------------------------------------------
+pygame.display.set_caption("edovshitler") # set the title of the screen
 while(loopGame):
     if (gameover):
         loopGame=False
@@ -117,7 +252,6 @@ while(loopGame):
                             if (event.type==pygame.KEYUP):
                                 if (event.key==pygame.K_p): # RESUME THE GAME
                                     loop = False
-        #print(event) display events
         #screen.fill(white)
         screen.blit(screenDisplay,(0,0))
         x = x + movimentox
