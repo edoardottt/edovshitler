@@ -35,6 +35,8 @@ It can run on Windows 10 | 8.1 | 8 | 7 | Vista
 DOWNLOAD :satellite:
 --------------------------
 
+[v0.1](https://github.com/edoardottt/edovshitler/releases/tag/v0.1)
+
 GIT command on prompt: git -clone https://github.com/edoardottt/edovshitler.git
 
 Download by Browser on: https://github.com/edoardottt/edovshitler
