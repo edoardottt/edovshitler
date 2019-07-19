@@ -72,6 +72,8 @@ USAGE :computer:
 VERSIONING :books:
 --------------------------
 
+[v0.1.1](https://github.com/edoardottt/edovshitler/releases/tag/v0.1.1)
+
 [v0.1](https://github.com/edoardottt/edovshitler/releases/tag/v0.1)
 
 --------------------------
