@@ -76,6 +76,8 @@ VERSIONING :books:
       - Added a pause/resume game option
 
 [v0.1](https://github.com/edoardottt/edovshitler/releases/tag/v0.1)
+      
+      - First release
 
 --------------------------
 If you liked it drop a :star:
