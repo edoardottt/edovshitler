@@ -27,6 +27,7 @@ screen = pygame.display.set_mode((screenWidth,screenHeight)) # set the screen di
 pygame.display.set_caption("edovshitler") # set the title of the screen
 pygame.key.set_repeat(0,0) # allow repeat key with 1st (before the first reapeat) and 2st(between 2 repeats)
 
+# images loading
 edo = pygame.image.load("edo.png")
 screenDisplay = pygame.image.load("wallpaper.png")
 missilepaint = pygame.image.load("missile.png")
@@ -36,56 +37,60 @@ explo = pygame.image.load("explosion.png")
 bomb = pygame.image.load("bomb.png")
 end = pygame.image.load("end.jpg")
 gameoverdisplay = pygame.image.load("gameover.jpg")
-x = (screenWidth*0.45)
-y = (screenHeight*0.74)
+x = (screenWidth*0.45) # Edo x coordinate
+y = (screenHeight*0.74) # Edo y coordinate
 
 
 #function definitions----------------------------------------------------------
-def paintEdo(x,y):
+def paintEdo(x,y):	# Edo painting function
     screen.blit(edo,(x,y))
-def paintExplo(x,y):
+def paintExplo(x,y):	# explotion painting function
     screen.blit(explo,(x,y))
 
 # variables definitions--------------------------------------------------------
-timee = 0
-movimentox = 0
-incrementoy = 25
-incrementohit = 30
-y_missile = y - 15
-inc_bomba = 15
-nemici_sconfitti = 0
-bombe_evitate = 0
-missili_sparati = 0
-missilen = 0
-white=(255, 255, 255)
+timee = 0	# loopGame iterations
+movimentox = 0	# Edo x movement 
+incrementoy = 25	# Edo y movement
+incrementohit = 30	
+y_missile = y - 15	# missile init painting
+inc_bomba = 15	# bomb y increment movement
+nemici_sconfitti = 0	# enemies defeated number
+bombe_evitate = 0	#bombs avoided
+missili_sparati = 0	# missiles shooted
+missilen = 0	# missiles number
+missili = []	# missiles array
+nemici = []		# enemies array
+bombe = []		# bombs array
+loopGame = True	# game while loop controller
+spara = False	# True if the gamer shoots
+hit = False		# True if almost an enemy is present
+bombes = False	# True if almost a bomb is present
+pressright = False	# True if right key is held down
+pressleft = False	# True if left key is held down
+abbassa = False		# True if an enemy is on a side of the screen and It has to go down
+gameover = False	# True if game is over
+quitting = False	# True if the gamer quits the game
+fine = True		# It becomes False if the gamer quits before the gameover
+every_enemy = 8	# Every how many iterations an enemy appears
+every_bomb = 13	# Every how many iterations a bomb appears
+font = 'freesansbold.ttf'	# Font definition
+
+# colors definition
+white=(255, 255, 255)	
 black=(0, 0, 0)
 gray=(50, 50, 50)
 red=(255, 0, 0)
 green=(0, 255, 0)
 blue=(0, 0, 255)
 yellow=(255, 255, 0)
-missili = []
-nemici = []
-bombe = []
-loopGame = True
-spara = False
-hit = False
-bombes = False
-pressright = False
-pressleft = False
-abbassa = False
-gameover = False
-quitting = False
-fine = True
-every_enemy = 8
-every_bomb = 13
-font = 'freesansbold.ttf'
+
 # start menu-------------------------------------------------------------------
 
 menu=True
 selected = 0
 menu_object = ["start","commands","info","quit"]
 pygame.font.init()
+
 def text_format(message, textFont, textSize, textColor):
     newFont=pygame.font.Font(textFont, textSize)
     newText=newFont.render(message, 0, textColor)
@@ -252,7 +257,7 @@ while(loopGame):
                             if (event.type==pygame.KEYUP):
                                 if (event.key==pygame.K_p): # RESUME THE GAME
                                     loop = False
-        #screen.fill(white)
+
         screen.blit(screenDisplay,(0,0))
         x = x + movimentox
         if (x < 0):
@@ -372,7 +377,7 @@ if(not quitting):
     if (int(stringarecord[0])==bombe_evitate or int(stringarecord[1])==missili_sparati or int(stringarecord[2])==nemici_sconfitti):
         record = True
         
-#------------------------------------------------------------------------------
+#RESULT VISUALIZATION------------------------------------------------------------------------------
     
 if(fine):
     pygame.font.init()
