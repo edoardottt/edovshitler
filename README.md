@@ -6,20 +6,22 @@ edovshitler is a simple game for computers that I enjoyed making it. It's maked 
 --------------------------
 DESCRIPTION :mega:
 --------------------------
+**The files in the first level are used to develop the game. In dist,build and __pycache__ folders, there are files built with pyinstaller **
 
-It was develop with pygame 1.9.5 library that helps game creating. It's a 2D game, based on Alien (a similar pc game). The commands are:
+It's important that all the files that are in dist folder remain in dist folder.
 
-      - Left arrow button - move to left
-      
-      - Right arrow button - move to right
-      
-      - Space button - shoot to enemies
-      
-      - P button - Pause and resume the game
-      
-It stores the record (maximum bombs avoided, maximum missiles shooted and maximum enemies killed) in the result.db database (SQLite3). It's built with pyinstaller --onefile command.
+It's developed with pygame 1.9.5 library that helps game creating. It's a 2D game, based on Alien (a similar pc game). The game controls are:
 
-**So, you can create your own exe file with pyinstaller.**
+      - Left arrow key - move to left
+      
+      - Right arrow key - move to right
+      
+      - Space key - shoot to enemies
+      
+      - P key - Pause and resume the game
+      
+It stores the record (maximum bombs avoided, maximum missiles shooted and maximum enemies killed) in the result.db database (SQLite3). It's built with 'pyinstaller --onefile file.py' command.
+
 For download it, execute:
 
       pip install pyinstaller
