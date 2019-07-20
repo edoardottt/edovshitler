@@ -20,9 +20,12 @@ It's developed with pygame 1.9.5 library that helps game creating. It's a 2D gam
       
       - P key - Pause and resume the game
       
-It stores the record (maximum bombs avoided, maximum missiles shooted and maximum enemies killed) in the result.db database (SQLite3). It's built with 'pyinstaller --onefile file.py' command.
+It stores the record (maximum bombs avoided, maximum missiles shooted and maximum enemies killed) in the result.db database (SQLite3). 
 
-For download it, execute:
+It's built with 'pyinstaller --onefile file.py' command.
+To create your own executable file with your changes:
+
+For download pyinstaller, execute:
 
       pip install pyinstaller
 
@@ -31,6 +34,9 @@ And then (inside the edovshitler folder) :
       pyinstaller --onefile game.py
 
 (The .exe is into /dist)
+
+All the files you see in dist folder except the executable file are mandatory (images and script used by .exe file)
+
 It can run on Windows 10 | 8.1 | 8 | 7 | Vista
 
 --------------------------
@@ -45,7 +51,7 @@ Download by Browser on: https://github.com/edoardottt/edovshitler
 USAGE :computer:
 --------------------------
 
-1) Download all the repo
+1) Download the repository
 
 2) Execute the /dist/initdb.py file for initialize the database (or follow the step 4)
 
