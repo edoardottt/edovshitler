@@ -53,7 +53,11 @@ USAGE :computer:
 
       3a) run the edovshitler.bat file by clicking two times on it
       
+      OR
+      
       3b) with a command prompt in edovshitler folder type edovshitler and ENTER
+            
+      OR
       
       3c) double click on /dist/game.exe file
       
@@ -61,7 +65,11 @@ USAGE :computer:
 
       4a) run the reset.bat file by clicking two times on it
       
+      OR
+      
       4b) with a command prompt in edovshitler folder type reset and ENTER
+      
+      OR
       
       4c) double click on /dist/initdb.py file
       
