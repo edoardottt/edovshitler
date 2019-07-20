@@ -7,7 +7,7 @@ edovshitler is a simple game for computers that I enjoyed making it. It's maked 
 DESCRIPTION :mega:
 --------------------------
 
-It was develop with pygame 1.9.5 library that helps game creating. It's a 2d game, based on alien (a similar pc game). The commands are:
+It was develop with pygame 1.9.5 library that helps game creating. It's a 2D game, based on Alien (a similar pc game). The commands are:
 
       - Left arrow button - move to left
       
