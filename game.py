@@ -281,8 +281,7 @@ while(loopGame):
             result.append(item)
         nemici = result
         if (hit):
-            for i in range(len(nemici)):
-                nemico = nemici[i]
+            for nemico in nemici:
                 if (490<=nemico.y_n<=600 and 0<=nemico.x_n<=760):
                     gameover = True
                 if (nemico.destra):
