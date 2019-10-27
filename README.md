@@ -3,6 +3,7 @@
 edovshitler is a simple game for computers that I enjoyed making it. It's maked using Python, especially with pygame library and SQLite3.
 
 [![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c31d18b0dbfb42d992390aa0b987bd6b)](https://www.codacy.com/manual/edoardottt/edovshitler?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=edoardottt/edovshitler&amp;utm_campaign=Badge_Grade)
 --------------------------
 DESCRIPTION :mega:
 --------------------------
