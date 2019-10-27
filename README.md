@@ -1,8 +1,8 @@
 # edovshitler 👾 🎮
----------------------
 
 edovshitler is a simple game for computers that I enjoyed making it. It's maked using Python, especially with pygame library and SQLite3.
 
+[![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/)
 --------------------------
 DESCRIPTION :mega:
 --------------------------
