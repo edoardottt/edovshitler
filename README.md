@@ -9,6 +9,7 @@ edovshitler is a simple game for computers that I enjoyed making it. It's maked 
 --------------------------
 DESCRIPTION :mega:
 --------------------------
+
 **The files in the first level are used to develop the game. In dist,build and __pycache__ folders, there are files built with pyinstaller **
 
 It's important that all the files that are in dist folder remain in dist folder.
