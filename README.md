@@ -46,6 +46,8 @@ It can run on Windows 10 | 8.1 | 8 | 7 | Vista
 DOWNLOAD :satellite:
 --------------------------
 
+WITH PIP --> pip install edovshitler
+
 GIT command on prompt: git -clone https://github.com/edoardottt/edovshitler.git
 
 Download by Browser on: https://github.com/edoardottt/edovshitler
@@ -88,6 +90,9 @@ USAGE :computer:
 --------------------------
 VERSIONING :books:
 --------------------------
+[v0.1.2](https://github.com/edoardottt/edovshitler/releases/tag/v0.1.2)
+
+      - Added release on pip
 
 [v0.1.1](https://github.com/edoardottt/edovshitler/releases/tag/v0.1.1)
 
