@@ -4,7 +4,7 @@ Created on Tue Apr 16 15:18:48 2019
 
 @author: edoardottt
 """
-version = 1.0
+version = 0.1.2
 print("https://www.edoardoottavianelli.it")
 print("edovshitler v"+str(version))
 print("MIT License")
@@ -15,7 +15,7 @@ from Enemy import Enemy
 from Missile import Missile
 from Bomb import Bomb
 import results
-import sys
+import sys,time
 
 #initialize pygame-------------------------------------------------------------
 pygame.init()
@@ -281,9 +281,11 @@ while(loopGame):
             result.append(item)
         nemici = result
         if (hit):
-            for nemico in nemici:
+            for i in range(len(nemici)):
+                nemico = nemici[i]
                 if (490<=nemico.y_n<=600 and 0<=nemico.x_n<=760):
                     gameover = True
+                    time.sleep(1)
                 if (nemico.destra):
                     nemico.x_n = nemico.x_n + incrementohit
                 else:
@@ -318,7 +320,9 @@ while(loopGame):
                     paintExplo(bomba.x_m,bomba.y_m)
                     paintExplo(bomba.x_m+100,bomba.y_m-100)
                     paintExplo(bomba.x_m-100,bomba.y_m-100)
+                    pygame.display.update()
                     gameover = True
+                    time.sleep(1)
                 if (bomba.y_m>500):
                     paintExplo(bomba.x_m,bomba.y_m-100)
                     bombe[i].__del__()
@@ -335,6 +339,7 @@ while(loopGame):
                 if (x_nemico-20<x_missile<x_nemico+70):
                     if (y_nemico<y_missile<y_nemico+90):
                         paintExplo(x_nemico,y_nemico)
+                        pygame.display.update()
                         nemici[j].__del__()
                         nemici_sconfitti += 1
         result = []
