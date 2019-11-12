@@ -1,6 +1,6 @@
 # edovshitler 👾 🎮
 
-edovshitler is a simple game for computers that I enjoyed making it. It's maked using Python, especially with pygame library and SQLite3.
+edovshitler is a simple game for computers that I enjoyed making it. It's made using Python, especially with pygame library and SQLite3.
 
 [![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/c31d18b0dbfb42d992390aa0b987bd6b)](https://www.codacy.com/manual/edoardottt/edovshitler?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=edoardottt/edovshitler&amp;utm_campaign=Badge_Grade)
@@ -10,9 +10,9 @@ edovshitler is a simple game for computers that I enjoyed making it. It's maked 
 DESCRIPTION :mega:
 --------------------------
 
-**The files in the first level are used to develop the game. In dist,build and __pycache__ folders, there are files built with pyinstaller **
+**The files in the first level are used to develop the game. In dist,build and pycache folders, there are files built with pyinstaller **
 
-It's important that all the files that are in dist folder remain in dist folder.
+It's important that all the files that are in dist folder stay in dist folder.
 
 It's developed with pygame 1.9.5 library that helps game creating. It's a 2D game, based on Alien (a similar pc game). The game controls are:
 
