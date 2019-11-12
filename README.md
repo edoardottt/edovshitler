@@ -20,7 +20,7 @@ It's developed with pygame 1.9.5 library that helps game creating. It's a 2D gam
       
       - Right arrow key - move to right
       
-      - Space key - shoot to enemies
+      - Space key - shoot the enemies
       
       - P key - Pause and resume the game
       
