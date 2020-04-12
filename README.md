@@ -16,13 +16,13 @@ It's important that all the files that are in dist folder stay in dist folder.
 
 It's developed with pygame 1.9.5 library that helps game creating. It's a 2D game, based on Alien (a similar pc game). The game controls are:
 
-      - Left arrow key - move to left
+- Left arrow key = move to left
       
-      - Right arrow key - move to right
+- Right arrow key = move to right
       
-      - Space key - shoot the enemies
+- Space key = shoot the enemies
       
-      - P key - Pause and resume the game
+- P key = Pause and resume the game
       
 It stores the record (maximum bombs avoided, maximum missiles shooted and maximum enemies killed) in the result.db database (SQLite3). 
 
