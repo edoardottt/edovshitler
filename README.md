@@ -6,6 +6,8 @@ edovshitler is a simple game for computers that I enjoyed making it. It's made u
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/c31d18b0dbfb42d992390aa0b987bd6b)](https://www.codacy.com/manual/edoardottt/edovshitler?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=edoardottt/edovshitler&amp;utm_campaign=Badge_Grade)
 ![win-build-success-badge](https://github.com/edoardottt/twitterBot/blob/master/images/win-build-success-badge.svg)
 
+![edo](https://github.com/edoardottt/edovshitler/blob/master/edo.png)
+
 --------------------------
 DESCRIPTION :mega:
 --------------------------
