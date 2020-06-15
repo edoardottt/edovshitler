@@ -10,13 +10,33 @@ edovshitler is a simple game for computers that I enjoyed making it. It's made u
   <img src="https://github.com/edoardottt/edovshitler/blob/master/edo.png">
 </p>
 
---------------------------
-DESCRIPTION :mega:
---------------------------
 
-**The files in the first level are used to develop the game. In dist,build and pycache folders, there are files built with pyinstaller **
+Get Started :mega:
+---------
 
-It's important that all the files that are in dist folder stay in dist folder.
+ **Build it with pyinstaller**
+ 
+Build with 'pyinstaller --onefile file.py' command.
+
+To create your own executable file with your changes:
+
+- Download pyinstaller, execute:
+
+      pip install pyinstaller
+
+- then execute(inside the edovshitler folder) :
+
+      pyinstaller --onefile game.py
+
+(The .exe is into /dist)
+
+All the files you see in dist folder except the executable file are mandatory (images and script used by .exe file)
+
+It can run on Windows 10 | 8.1 | 8 | 7 | Vista
+
+
+Description :mega:
+---------
 
 It's developed with pygame 1.9.5 library that helps game creating. It's a 2D game, based on Alien (a similar pc game). The game controls are:
 
@@ -30,26 +50,9 @@ It's developed with pygame 1.9.5 library that helps game creating. It's a 2D gam
       
 It stores the record (maximum bombs avoided, maximum missiles shooted and maximum enemies killed) in the result.db database (SQLite3). 
 
-It's built with 'pyinstaller --onefile file.py' command.
-To create your own executable file with your changes:
 
-For download pyinstaller, execute:
-
-      pip install pyinstaller
-
-And then (inside the edovshitler folder) :
-
-      pyinstaller --onefile game.py
-
-(The .exe is into /dist)
-
-All the files you see in dist folder except the executable file are mandatory (images and script used by .exe file)
-
-It can run on Windows 10 | 8.1 | 8 | 7 | Vista
-
---------------------------
-DOWNLOAD :satellite:
---------------------------
+Download :satellite:
+----------
 
 WITH PIP --> pip install edovshitler
 
@@ -57,9 +60,9 @@ GIT command on prompt: git -clone https://github.com/edoardottt/edovshitler.git
 
 Download by Browser on: https://github.com/edoardottt/edovshitler
 
---------------------------
-USAGE :computer:
---------------------------
+
+Usage :computer:
+---------
 
 1) Download the repository
 
@@ -92,9 +95,10 @@ USAGE :computer:
 5) Have fun playing it!
 :zap::zap::zap:
 
---------------------------
-VERSIONING :books:
---------------------------
+
+Versioning :books:
+-----------
+
 [v0.1.2](https://github.com/edoardottt/edovshitler/releases/tag/v0.1.2)
 
       - Added release on pip
