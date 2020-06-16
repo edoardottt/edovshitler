@@ -54,45 +54,44 @@ It stores the record (maximum bombs avoided, maximum missiles shooted and maximu
 Download :satellite:
 ----------
 
-WITH PIP --> pip install edovshitler
+- GIT command on prompt: git -clone https://github.com/edoardottt/edovshitler.git
 
-GIT command on prompt: git -clone https://github.com/edoardottt/edovshitler.git
+- Download by Browser on: https://github.com/edoardottt/edovshitler
 
-Download by Browser on: https://github.com/edoardottt/edovshitler
-
+- WITH PIP --> pip install edovshitler
 
 Usage :computer:
 ---------
 
-1) Download the repository
+1. Download the repository
 
-2) Execute the /dist/initdb.py file for initialize the database (or follow the step 4)
+2. Execute the /dist/initdb.py file for initialize the database (or follow the step 4)
 
-3) How to play: 
+3. How to play: 
 
-      3a) run the edovshitler.bat file by clicking two times on it
+      3a. run the edovshitler.bat file by clicking two times on it
       
       OR
       
-      3b) with a command prompt in edovshitler folder type edovshitler and ENTER
+      3b. with a command prompt in edovshitler folder type edovshitler and ENTER
             
       OR
       
-      3c) double click on /dist/game.exe file
+      3c. double click on /dist/game.exe file
       
-4) If you want to reset the database:
+4. If you want to reset the database:
 
-      4a) run the reset.bat file by clicking two times on it
+      4a. run the reset.bat file by clicking two times on it
       
       OR
       
-      4b) with a command prompt in edovshitler folder type reset and ENTER
+      4b. with a command prompt in edovshitler folder type reset and ENTER
       
       OR
       
-      4c) double click on /dist/initdb.py file
+      4c. double click on /dist/initdb.py file
       
-5) Have fun playing it!
+5. Have fun playing it!
 :zap::zap::zap:
 
 
