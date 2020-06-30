@@ -15,8 +15,6 @@ Get Started :mega:
 ---------
 
  **Build it with pyinstaller**
- 
-Build with 'pyinstaller --onefile file.py' command.
 
 To create your own executable file with your changes:
 
