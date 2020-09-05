@@ -1,6 +1,6 @@
 # edovshitler 👾 🎮
 
-Maybe Linux Testing
+It works nicely on Windows, maybe Linux testing...
 
 edovshitler is a simple game for computers that I enjoyed making it. It's made using Python, especially with pygame library and SQLite3.
 
