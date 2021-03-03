@@ -54,11 +54,7 @@ It stores the record (maximum bombs avoided, maximum missiles shooted and maximu
 Download :satellite:
 ----------
 
-- GIT command on prompt: git -clone https://github.com/edoardottt/edovshitler.git
-
-- Download by Browser on: https://github.com/edoardottt/edovshitler
-
-- WITH PIP --> pip install edovshitler
+- `git -clone https://github.com/edoardottt/edovshitler.git`
 
 Usage :computer:
 ---------
@@ -96,7 +92,7 @@ Usage :computer:
 
 
 Versioning :books:
------------
+---------
 
 [v0.1.2](https://github.com/edoardottt/edovshitler/releases/tag/v0.1.2)
 
@@ -111,10 +107,10 @@ Versioning :books:
       
       - First release
 
---------------------------
+
 If you liked it drop a :star:
---------------------------
+-------
 
 https://www.edoardoottavianelli.it for contact me.
 
-                  Edoardo Ottavianelli ©
+                                                      Edoardo Ottavianelli
