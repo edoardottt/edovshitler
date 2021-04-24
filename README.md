@@ -108,9 +108,8 @@ Versioning :books:
       - First release
 
 
-If you liked it drop a :star:
+License 📝
 -------
 
-https://www.edoardoottavianelli.it for contact me.
-
-                                                      Edoardo Ottavianelli
+This repository is under [MIT License](https://github.com/edoardottt/edovshitler/blob/master/LICENSE).  
+[edoardoottavianelli.it](https://www.edoardoottavianelli.it) for contact me.
