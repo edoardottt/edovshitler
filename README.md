@@ -18,15 +18,11 @@ Get Started :mega:
 
 To create your own executable file with your changes:
 
-- Download pyinstaller, execute:
+- Download pyinstaller, execute: `pip install pyinstaller`
 
-      pip install pyinstaller
+- then execute(inside the edovshitler folder) : `pyinstaller --onefile game.py`
 
-- then execute(inside the edovshitler folder) :
-
-      pyinstaller --onefile game.py
-
-(The .exe is into /dist)
+(The .exe is inside /dist folder)
 
 All the files you see in dist folder except the executable file are mandatory (images and script used by .exe file)
 
