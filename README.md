@@ -90,16 +90,16 @@ Versioning :books:
 
 [v0.1.2](https://github.com/edoardottt/edovshitler/releases/tag/v0.1.2)
 
-      - Added release on pip
+- Add release on pip
 
 [v0.1.1](https://github.com/edoardottt/edovshitler/releases/tag/v0.1.1)
 
-      - Added a Menu
-      - Added a pause/resume game option
+- Add a Menu
+- Add a pause/resume game option
 
 [v0.1](https://github.com/edoardottt/edovshitler/releases/tag/v0.1)
       
-      - First release
+- First release
 
 
 License 📝
