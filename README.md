@@ -1,5 +1,6 @@
-# edovshitler 👾 🎮
-
+<p align="center">
+  <h1 align="center">edovshitler 👾 🎮</h1>
+</p>
 <p align="center">
   <img src="https://github.com/edoardottt/edovshitler/blob/master/edo.png">
   <br>
